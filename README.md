@@ -1,2 +1,2 @@
-# Cryptocurrency Notes
+# Blockchain Notes
 
