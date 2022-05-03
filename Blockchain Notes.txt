@@ -1,0 +1,258 @@
+1.Money
+#Types of Money
+>Representative Money		//issued by government(Gold certificates)
+>Fiat Money					//Government has declared to be legal tender, but it is not backed by a physical commodity(us 
+							dollar,yen,rupee)
+>Digital Money
+
+#Cryptocurrency
+Digital coin is something that is issued by the person starting it.He issues the currency to some of the people and then they start making transactions. This transactions are managed by the person who started it and he keeps the entries of each and every transaction made. It is good but the problem is that if he issues more and more currency to the people he like and the trust broked. He can make any changes in the transaction in the ledger and an entry can also be deleted.
+
+Digital currency without a central authority must--
+be resistant to counterfeit
+Have a controlled supply
+Be secure
+
+
+2.Bitcoin--Cryptocurrency(Satoshi Nakamoto)
+Bitcoin uses cryptography to-
+Prove Integrity of ledger
+Prove ownership
+
+>>Bitcoin is a peer to peer payment network that is powered by its users and governed by a combination of cryptography and social consensus(no central authority)
+Any transaction made in Bitcoin, the ledger is updated all over the globe(decentralization)
+Transactions can be seen in public-
+>>blockchain.info
+>>btc.com
+
+
+#Acquiring bitcoin
+1.Purcase at an exchange			//exchange cryptocurrency with other currency(rupee,yen,dollar)(Easy process)
+Exchanges are not decentralized--
+Subject to regulation
+Significantly easier to trace as you give your identity to them
+Lack the security guarantees of the bitcoin protocol
+Exchange holds the bitcoin for us and if it is hacked then our all bitcoins have gone 
+
+www.bitcoin.org		//lets you buy the bitcoin
+
+2.Exchanges for goods and services--
+Peer to peer for the services and goods
+
+3.Generate through Mining--
+Generated through competitive process called mining.
+People who maintain the ledgers earn bitcoin.
+Miners maintain blockchain network and they transfer the same information to other miners
+
+
+#Working of Bitcoin--
+Bitcoin is sent to an Address(QR code)
+Address is used to receive payments
+Private key is used to unlock payments
+Usually it is managed through an app
+
+In bitcoin it happens that whenver we have sent the bitcoin to other and typed in the wrong amount, it get locked and we can't get it back unless the other user returns to us.
+Once we have locked the bitcoin in the dropbox we put it in the blockchain(list of transactions, giant ledger) and put in the public place. Blockchain is not one, it is there all over the globe and it is shared by the miners to each other and sharing information.
+With people saying that they have bitcoin, there is nothing on your computer or stored, it's just the private key that helps to say that bitcoin is yours.If the bitcoin is hacked, it's just mean that their private keys are stolen.
+
+>>Private keys needs to be stored safely
+
+It's not so that bitcoin is transferred immediately to the other user, it will be transferred only when it is confirmed by the network.We will not receive the bitcoin unless it is totally confirmed and we can use any of the app interfaces like bitpay,blockchain and anything else. All works the same way.
+Bitcoin takes a time to sent the bitcoin to other users, which other bitcoins attempts to solve.
+
+
+#There are 2 types of architecture
+1.Push--In this architecture, we have a technique of mailman/delivery boy like in whatsapp where the data is transferred from one phone to other and the data is transferred to the particular user directly.
+2.Pull--In pull architecture, the data is not transferred to other user, unlike it just pull the message to the internet and the other user asks again and again on the internet,asking that "is there anything for me".eg-Bitcoin network 
+
+##Process
+Sender broadcast transaction to nearby miners
+Miners relay the transaction to more miners
+When a majority of the network accepts the transaction,the receiver considers the transaction complete
+
+>>Does my phone need to be on--No
+Sending bitcoin is merely adding data to the public ledger
+When the receiver logs back on, they will see the updates to the ledger and determine the new balance.
+
+
+##Miners-Store ledgers,relay transactions, verify transaction(does sender have sufficient funds,is the transaction authentic)
+Miners are in charge of maintaining the blockchain network, maintaining the ledger
+Average 2018 Desktops> $0.01/year
+There can be a problem of double spend.
+
+##Double Spends-This is a type of exploit, in this we place the block(i.e. money transferred to my address) before the actual y block(money sending to another address). Then when the block are put in blockchain, then the miners will execute the first block, and then the miners will see to the next block and they will see that the sender does not have much bitcoin to take place and thus the block will be discarded leading to double spend as the notification went to the receiver that your bitcoin is pending.
+
+
+
+
+
+
+
+
+
+#Cryptography
+It helps in securing the ledger, ensuring the integrity of our transactions.
+Cipher is the encoded message.
+Old crpytographic methods-
+1.Caesar Cipher
+2.Engima code done using Engima Machine
+
+>>Cryptography allows bitcoin to be secure,it allows the minors to verify the authenticity of the ledger.
+
+##One way function
+These are the functions which have only one calculation performed.
+Intuitive application of One-way function i.e. Thumbprints
+Fingerprinting the file to make it secure and nowadays it's really common.
+
+##Hash functions
+MD5--Common, problems discovered
+Sha-2--Very common,problems fixed(used by bitcoin). It consist of SHA-256,SHA-384,SHA-512. This all specified the size of output in bits.
+KECCAK(SHA-3)--Faster and more secure(lot of technologies are moving to SHA-3)
+
+##Hash Function-This is a function where the input is passed and the output is generated using a specific algorithm.
+Advantages-
+1.Deterministic
+2.Quick to compute
+3.Infeasible to reverse
+4.Infeasible to collide
+5.Small change in input->Big change in output
+
+
+
+
+
+
+
+
+
+
+#Blocks and Blockchain
+Ledger needs to be secure, people are not allowed to change.
+Single ledger will take much time if we do fingerprinting of it.
+That is why, ledger is divided into blocks and thus the blockchain.
+Now we make a fingerprint(it is the converting a file to a hash value) of the block and it is easier as block only contains small peice of information i.e. From, To, Quantity.
+Feature of fingerprinting is that a small change in the input, a small change in the output, thus we can get to know that the blocks are tampered.
+Blocks are checkpoints saved every 10 minutes.
+
+
+##Blockchain-
+A community-maintained database of transactions which grows, but can't be modified.
+Database is modifiable, centrally maintained,several backup of copies while,
+Blockchain is not modifiable,globally maintained,10's of thousands of copies.
+Height is, the blocks that are added are stacked at the bottom of the list.
+
+##Block Anatomy-
+In this we add the hash of the previous block to the hash of the current block, now if the previous block hash is changed then the current block hash will also get changed, and in this way we can check that any value is not changed in the past.
+If any change in the input is changed in the middle, it will not affect the previous blocks as change is not been made there, but the next ones will turn red leading to the change in the blocks.
+
+>>Bunch of block and are links to one another.Each block referencing to the previous block.
+
+
+##Mechanics of Mining
+>>Why do miners mine-Because they are rewarded.
+>>Proof of Work-An economic  measure that requires a service requester to perform some work to: prevent spam.
+In mining Proof of work is just not a captcha, there is a hard math problem.
+A difficult math problem based on the current pending block. The first to solve it is awarded bitcoin.
+
+>Nonce-It is the random number.
+>Hashcash-It is the proof of work challenge that bitcoin uses in the same way that a captcha uses for web use.
+
+Miners need to solve a challenge and all these miners are repeating over and over again at these ridiculous rates.
+Blockchain is Tamper Resistant
+Block size and fees-Transactions are not of same block sizes and differs the amount of fees based on urgency, normal etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Cryptography---
+Encryption-The process of converting information or data into a code, especially to prevent unauthorized access.
+
+1.Symmetric Key Cryptography/Shared key Cryptography/Private key Cryptography-With symmetric cryptography, both sender and receiver need the same cipher.In this cryptography, we have the same key to the sender as well as the receiver.
+
+
+2.Public Key Cryptography/Asymmetric Key Cryptography--
+In this cryptography, two keys are used.
+Private key--Meant to be kept safe
+Public key--Publically release
+
+Encryption will take place using Public key, while decryption will take place using Private key.
+This is the secure way to transfer information to eg-Colt.Also consider the fact that once i put my bitcoin into it, i can't get it back out.I don't have the private key corresponding to Colt's private key.Due to this, the bitcoin transaction are irreversible.How this is, we establish ownership.
+
+Public key algorithm-
+1.RSA(Rivest, Shamir, Adleman)
+2.ECDSA(Elliptic Curve Digital Signature Algorithm)--Bitcoin's actual algorithm,More advanced, Smaller Keys, More secure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Digital Signing and Bitcoin
+Private Key Signing is used to verify the identity(Digital signature)
+It is same as handwritten signature, as we can only produce our handwritten signature.
+In private key, only i can sign and anyone can verify.
+Transations Ins, Transactions Outs
+
+Cryptocurrency-
+Monero
+Zcash
+Cardano
+Ripple
+
+
+
+
+
+
+
+
+#Ethereum Cryptocurrency
+Miners use Graphic Cards
+A decentralized payment network, similar to Bitcoin that allows users to write code that runs on the Blockchain
+Ethereum is not just for commodities or for transactions, but also allows users of the network to run and write applications.
+So,Ethereum takes this concept of remote computing and extends it and applies it to the block chain
+
+Smart Contract- A contract enforced by computers. eg- Vending machine. It has a smart contract, that whenever you put some money and it is the right amount, you will get something in return.eg- Election contract.
+These are the applications that run on the blockchain that are resistant to:-
+1.Downtime
+2.Censorship
+3.Fraud
+4.Interference
+
+Bitcoin Limitations-Miners use ASICs
+1.Transaction times
+2.Transaction Fees
+3.Centralized Mining
+4.Limited in Scope
+
+How to pick cryptocurrency--
+Choosing an Exchange
+Choosing a Wallet--ArcBit(Iphone), BRD(Android)
+
+
+
+
+# Security (Cryptocurrency)
+> Peform 51% attack 
+* attackers should be in majority
+* bitcoin has rule that after 72 hrs, transactions are removed from mempool if they are not mined
+* and transcation will never be mined because attackers are in majority
+* also the transcations in the first chain, will be considered as confirmation as people whol receive the payment see that the other blocks are added after that, but who knows that these blocks will be considered as waste
+
+#ends
